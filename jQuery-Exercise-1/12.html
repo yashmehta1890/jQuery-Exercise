@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise-1_12</title>
+	<!-- Jquery JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<!-- CSS -->
+	<style type="text/css">
+		div {
+			width: 20px;
+			height: 20px;
+			margin: 5px;
+			float: left;
+			border: 2px solid green;
+		}
+		.red {
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<button  id="button1">Click to see the effect</button>
+	<script type="text/javascript">
+ 		$(document).ready(function(){
+			$("button").click(function(){
+		   		$("body div:eq(3)").addClass("red");
+			});
+		});
+	</script>
+</body>
+</html>

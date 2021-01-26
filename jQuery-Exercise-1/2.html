@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise-1_02</title>
+	<!-- Jquery JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<p>PHP Exercises</p>
+	<p>Python Exercises</p>	
+	<p>JavaScript Exercises</p>
+	<p>jQuery Exercises</p>
+	
+	<script type="text/javascript">
+		$('p').each(function(){
+			const val = $(this);
+			val.html( val.text().replace(/(^\w+)/,'<b>$1</b>'));
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise-1_05</title>
+	<!-- Jquery JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<p>jQuery Exercises</p>
+	<button id="btn">Click to see the effect</button>
+	<script type="text/javascript">
+ 		$(document).ready(function(){
+		  $("#btn").click(function(){
+		    $("p").after("<p>with Solution</p>");
+		  });
+		});
+	</script>
+</body>
+</html>

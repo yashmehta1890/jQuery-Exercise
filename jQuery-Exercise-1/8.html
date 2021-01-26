@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise-1_08</title>
+	<!-- Jquery JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<p>jQuery Exercises, Practice,<em title="Real life jQuery or all."> Solution.</em></p>
+	<br><button  id="button1">Click to see the effect</button>
+	<script type="text/javascript">
+ 		$(document).ready(function(){
+		  $("#button1").click(function(){
+		    const val = $("em").attr("title");
+			$("p").after(val);
+		  });
+		});
+	</script>
+</body>
+</html>

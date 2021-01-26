@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise-1_06</title>
+	<!-- Jquery JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<div id="iddiv">
+		<span>This is a span</span>
+		<p>This is a paragraph</p>
+		<button id="button1">Click to see the effect</button> 
+	</div>
+	<script type="text/javascript">
+ 		$(document).ready(function(){
+		  $("#button1").click(function(){
+		    const val = $("#iddiv *").css("border","1px solid black").length;
+        	$("div").after(val+ "elements found");
+		  });
+		});
+	</script>
+</body>
+</html>

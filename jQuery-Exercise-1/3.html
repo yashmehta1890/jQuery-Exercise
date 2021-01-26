@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise-1_03</title>
+	<!-- Jquery JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<textarea id="val">jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.</textarea><br>
+	<button id="btn">Get Text</button>
+	<script type="text/javascript">
+ 		$(document).ready(function(){
+ 			$("#btn").click(function(){
+	 			const val = $("#val").text();
+	 			$("button").after(val);	
+ 			});
+ 		});
+	</script>
+</body>
+</html>
