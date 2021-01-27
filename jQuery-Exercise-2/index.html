@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_4</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<!-- input fileds -->
+	<div>
+		<input type="text" name="fname" id="fname" placeholder="First Name" autofocus required>
+		<input type="text" name="lname" id="lname" placeholder="Last Name" required>
+		<input type="text" name="hexcolor" id="hexcolor" placeholder="#Background Color" required>
+		<select type="text"  name="txtsize" id="txtsize" required >
+			<option>Text Size</option>
+			<option value="large">Large</option>
+			<option value="medium">Medium</option>
+			<option value="small">Small</option>
+		</select>
+		<input type="button" name="btn" id="btn" value="Add" onclick="checkValue(number)">
+	</div>
+	<!-- table -->
+	<div>
+		<table id="data_table" style="margin-top: 20px;">
+			<tr id="defaultRow" style="visibility:hidden;">
+				<td>
+					<input type="checkbox" name="check_all" id="check_all" onclick="selectallRows(this)" >	
+				</td>
+				<td>
+					Select All
+				</td>
+				<td>
+					Total <span id="selectedRows">0</span> selected row(s)
+				</td>
+				<td>
+					<input type='button' value='Delete' onclick="deleteMultipleRow()" style='background-color:red;'>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<!-- JS -->
+	<script type="text/javascript" src="custom.js"></script>
+</body>
+</html>
