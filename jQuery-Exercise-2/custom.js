@@ -112,10 +112,18 @@ function edit_row(no)
 function updateRow(number)
 {
 if(!checkEmptyInput()){
-	      document.getElementById("fname_val"+number+"").value = document.getElementById("fname").value;
- 	  document.getElementById("lname_val"+number+"").value = document.getElementById("lname").value;
- 	  document.getElementById("fname").value="";
- 	  document.getElementById("lname").value="";
-    document.getElementById("btn").value = "Add";
+	let fnameval = $("#fname").val();
+	let lnameval = $("#lname").val();
+	let hexcolorval = $("#hexcolor").val();
+	let txtsizeval = $("#txtsize").val();
+	
+	$(`#firstName${number}`).val(fnameval);
+	$(`#lastName${number}`).val(lnameval);
+	$("#btn").val("Add");
+	
+	$("#fname").val("");
+	$("#lname").val("");
+	$("#hexcolor").val("");
+	$("#txtsize").val("");
 	}
 }
