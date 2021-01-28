@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task2</title>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">  
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+	<style type="text/css">
+		img{
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div id="tab">
+		<ul>  
+			<li><a href="#1">London</a></li>  
+			<li><a href="#2">Paris</a></li>  
+			<li><a href="#3">Tokyo</a></li>  
+		</ul>  
+		<div id="1">
+			<p>London</p>
+			<img src="1.jpg">
+			<p>London is the capital of England.</p>
+		</div>
+		<div id="2">
+			<p>Paris</p>
+			<img src="2.jpg">
+			<p>Paris is the capital of France.</p>
+		</div>
+		<div id="3">
+			<p>Tokyo</p>
+			<img src="3.jpg">
+			<p>Tokyo is the capital of Japan.</p>
+		</div>  
+    </div>
+    <div id ="accordion">
+        <h3>London</h3>
+        <div>
+            <img src="1.jpg">
+			<p>London is the capital of England.</p>
+        </div>
+        <h3>Paris</h3>
+        <div>
+            <img src="2.jpg">
+			<p>Paris is the capital of France.</p>
+        </div>
+        <h3>Tokyo</h3>
+        <div>
+            <img src="3.jpg">
+		  	<p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+		$(document).ready(function () {
+		    const val = $(this).width(); 
+	        if (val<=700) {
+	            $("#tab").hide();
+	            $("#accordion").accordion().show();  
+	        }else{
+	            $("#tab").tabs().show();
+	            $("#accordion").hide(); 
+	        }
+			$(window).resize(function () {
+			    const val = $(this).width(); 
+		        if (val<=700) {
+		            $("#tab").hide();
+		            $("#accordion").accordion().show();  
+		        }else{
+		            $("#tab").tabs().show();
+		            $("#accordion").hide(); 
+		        }
+			});
+        });
+	</script>
+</body>
+</html>
